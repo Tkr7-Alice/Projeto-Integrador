@@ -2,191 +2,117 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <title>Editar Usuário</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editar Usuário</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/configuracoes.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-top: 20px;
+            background: #f8f8f8;
+        }
+
+        .sidebar {
+            width: 200px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+        }
+
+        .content-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content {
+            padding: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
-<div class="row flex-lg-nowrap">
-  <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
-    <div class="card p-3">
-      <div class="e-navlist e-navlist--active-bg">
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link px-2 active" href="#"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Visão Geral</span></a></li>
-          <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-crud-users" target="__blank"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
-          <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page" target="__blank"><i class="fa fa-fw fa-cog mr-1"></i><span>Configurações</span></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
     <div class="row">
-      <div class="col mb-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="e-profile">
-              <div class="row">
-                <div class="col-12 col-sm-auto mb-3">
-                  <div class="mx-auto" style="width: 140px;">
-                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
-                  <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">João Silva</h4>
-                    <p class="mb-0">@joao.s</p>
-                    <div class="text-muted"><small>Última vez online há 2 horas</small></div>
-                    <div class="mt-2">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fa fa-fw fa-camera"></i>
-                        <span>Alterar Foto</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="text-center text-sm-right">
-                    <span class="badge badge-secondary">administrador</span>
-                    <div class="text-muted"><small>Membro desde 09 Dez 2017</small></div>
-                  </div>
-                </div>
-              </div>
-              <ul class="nav nav-tabs">
-                <li class="nav-item"><a href="" class="active nav-link">Configurações</a></li>
-              </ul>
-              <div class="tab-content pt-3">
-                <div class="tab-pane active">
-                  <form class="form" novalidate="">
-                    <div class="row">
-                      <div class="col">
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Nome Completo</label>
-                              <input class="form-control" type="text" name="name" placeholder="João Silva" value="João Silva">
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Nome de Usuário</label>
-                              <input class="form-control" type="text" name="username" placeholder="joao.s" value="joao.s">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Email</label>
-                              <input class="form-control" type="text" placeholder="usuario@exemplo.com">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col mb-3">
-                            <div class="form-group">
-                              <label>Sobre</label>
-                              <textarea class="form-control" rows="5" placeholder="Minha Biografia"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 col-sm-6 mb-3">
-                        <div class="mb-2"><b>Alterar Senha</b></div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Senha Atual</label>
-                              <input class="form-control" type="password" placeholder="••••••">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Nova Senha</label>
-                              <input class="form-control" type="password" placeholder="••••••">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Confirmar <span class="d-none d-xl-inline">Senha</span></label>
-                              <input class="form-control" type="password" placeholder="••••••"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                        <div class="mb-2"><b>Manter Contato</b></div>
-                        <div class="row">
-                          <div class="col">
-                            <label>Notificações por Email</label>
-                            <div class="custom-controls-stacked px-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="notifications-blog" checked="">
-                                <label class="custom-control-label" for="notifications-blog">Posts do Blog</label>
-                              </div>
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="notifications-news" checked="">
-                                <label class="custom-control-label" for="notifications-news">Newsletter</label>
-                              </div>
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="notifications-offers" checked="">
-                                <label class="custom-control-label" for="notifications-offers">Ofertas Pessoais</label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col d-flex justify-content-end">
-                        <button class="btn btn-primary" type="submit">Salvar Alterações</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
+        <!-- Sidebar -->
+        <div class="col-12 col-md-3 sidebar">
+            <div class="card content-card p-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fa fa-bar-chart"></i> Visão Geral
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-th"></i> CRUD
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-cog"></i> Configurações
+                        </a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      </div>
-
-      <div class="col-12 col-md-3 mb-3">
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="px-xl-3">
-              <button class="btn btn-block btn-secondary">
-                <i class="fa fa-sign-out"></i>
-                <span>Sair</span>
-              </button>
+        <!-- Main Content -->
+        <div class="col-12 col-md-9">
+            <div class="card content-card">
+                <div class="card-body">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Configurações</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" class="form-control" id="name" placeholder="João Silva" value="João Silva">
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Nome de Usuário</label>
+                                <input type="text" class="form-control" id="username" placeholder="joao.s" value="joao.s">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="usuario@exemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Sobre</label>
+                                <textarea class="form-control" id="bio" rows="3" placeholder="Minha biografia"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h6 class="card-title font-weight-bold">Suporte</h6>
-            <p class="card-text">Receba ajuda rápida e gratuita de nossos assistentes amigáveis.</p>
-            <button type="button" class="btn btn-primary">Fale Conosco</button>
-          </div>
-        </div>
-      </div>
     </div>
-
-  </div>
 </div>
-</div>
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript">
-
-
-</script>
 </body>
 </html>
